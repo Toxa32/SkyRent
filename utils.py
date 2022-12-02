@@ -4,6 +4,7 @@ import json
 
 from flask import Flask
 from flask_restx import Api
+from flask_cors import CORS
 from flask_sqlalchemy import SQLAlchemy
 from setup.db import db
 from setup.api import api
@@ -29,6 +30,7 @@ def create_extensions(app: Flask) -> None:
 
     :param app: an instance of Flask
     """
+    CORS(app)
     db.init_app(app)
     api.init_app(app)
 
@@ -70,13 +72,15 @@ def add_data_to_database(data: list, db_obj: SQLAlchemy) -> None:
     for record in data:
 
         record['id'] = record.pop('pk')
+        record['features_on'] = record['features_on'].split(', ')
+        record['features_off'] = record['features_off'].split(', ')
 
         db_obj.session.add(Offer(**record))
 
     db_obj.session.commit()
 
 
-def load_from_json(filename) -> list:
+def load_from_json(filename: str) -> list:
     """This function loads data from a JSON file
 
     :param filename: a JSON file

@@ -14,5 +14,5 @@ class Offer(Base):
     price = db.Column(db.Integer, nullable=False)
     country = db.Column(db.String, nullable=False)
     city = db.Column(db.String, nullable=False)
-    features_on = db.Column(db.String, nullable=False)
-    features_off = db.Column(db.String, nullable=False)
+    features_on = db.Column(db.PickleType, nullable=False)
+    features_off = db.Column(db.PickleType, nullable=False)
