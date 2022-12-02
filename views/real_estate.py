@@ -1,4 +1,5 @@
 """This file contains CBVs to work with user's requests"""
+from flask import request
 from flask_restx import Namespace, Resource
 from container import offers_service
 from setup.api.schemas import offer_schema
@@ -17,7 +18,9 @@ class OffersView(Resource):
 
         :returns: a list of serialized data and a status code
         """
-        return offers_service.get_all(), 200
+        filters = request.args
+
+        return offers_service.get_all(**filters), 200
 
 
 @real_estate_ns.route('/<int:offer_id>')
