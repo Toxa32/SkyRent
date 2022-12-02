@@ -8,3 +8,5 @@ class OfferDAO(BaseDAO[Offer]):
     """The OfferDAO class contains all necessary methods to get data
     from offers table"""
     __model__ = Offer
+
+

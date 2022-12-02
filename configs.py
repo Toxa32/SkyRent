@@ -11,7 +11,6 @@ dotenv.load_dotenv()
 class BaseConfig:
     """The BaseConfig class contains basic settings for application"""
     JSON_AS_ASCII = False
-    DEBUG = True
     RESTX_JSON = {'ensure_ascii': False}
     BASE_DIR = Path(__file__).resolve().parent
     SQLALCHEMY_TRACK_MODIFICATIONS = False
@@ -21,12 +20,14 @@ class BaseConfig:
 class TestConfig(BaseConfig):
     """The TestConfig class contains settings to test application"""
     SQLALCHEMY_DATABASE_URI = f'sqlite:///:memory:'
+    DEBUG = True
 
 
 class DevelopConfig(BaseConfig):
     """The DevelopConfig class contains settings for development purposes"""
     DB_PATH = BaseConfig.BASE_DIR.joinpath('develop_db.db').as_posix()
     SQLALCHEMY_DATABASE_URI = f"sqlite:///{DB_PATH}"
+    DEBUG = True
 
 
 class ProductionConfig(BaseConfig):
@@ -34,6 +35,7 @@ class ProductionConfig(BaseConfig):
     application"""
     DB_PATH = BaseConfig.BASE_DIR.joinpath('sky_rent.db').as_posix()
     SQLALCHEMY_DATABASE_URI = f"sqlite:///{DB_PATH}"
+    DEBUG = False
 
 
 class ConfigManager:
