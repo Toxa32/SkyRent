@@ -2,9 +2,6 @@
 development, testing and production"""
 from pathlib import Path
 from os import getenv
-import dotenv
-# ------------------------------------------------------------------------
-dotenv.load_dotenv()
 # ------------------------------------------------------------------------
 
 
@@ -60,5 +57,3 @@ class ConfigManager:
             raise NotImplemented(f'Failed to get config for {self.env}')
 
         return work_config
-
-
