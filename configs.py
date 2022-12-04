@@ -24,7 +24,7 @@ class DevelopConfig(BaseConfig):
     """The DevelopConfig class contains settings for development purposes"""
     DB_PATH = BaseConfig.BASE_DIR.joinpath('develop_db.db').as_posix()
     SQLALCHEMY_DATABASE_URI = f"sqlite:///{DB_PATH}"
-    DEBUG = True
+    DEBUG = False
 
 
 class ProductionConfig(BaseConfig):
