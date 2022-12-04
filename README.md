@@ -5,13 +5,14 @@ This is the server part of the application for renting real estate abroad. The a
  - Filtering data by country, city and price
  - Displaying detailed information about the offer
 ---
+
 Team members:
-Nara Mosesyan - CEO of the project
-Irackliy - COO
-Gleb Kushedow - Team-leader
-Angelica - Frontend developer
-Sazonov Dmitry - QA-engineer
-Aleksey Mavrin - Backend developer
+- Nara Mosesyan - CEO of the project
+- Irackliy - COO
+- Gleb Kushedow - Team-leader
+- Angelica - Frontend developer
+- Sazonov Dmitry - QA-engineer
+- Aleksey Mavrin - Backend developer
  ---
 The project's structure: 
  - dao - DAOs to work with different tables
