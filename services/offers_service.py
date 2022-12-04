@@ -40,6 +40,6 @@ class OfferService(BaseService[OfferDAO, Offer]):
         offers = self.dao.get_all(**filters)
 
         if not offers:
-            abort(404, 'Not Found')
+            abort(400, 'Unfortunately We have no records You are looking for')
 
         return offers

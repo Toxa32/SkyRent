@@ -1,6 +1,4 @@
 """This unit contains TestOfferDao class to test OfferDAO"""
-import pytest
-
 # -------------------------------------------------------------------------
 
 

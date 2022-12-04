@@ -26,7 +26,7 @@ class BaseService(Generic[T, M]):
         records = self.dao.get_all()
 
         if not records:
-            abort(404, 'Not Found')
+            abort(400, 'Unfortunately We have no records You are looking for')
 
         return records
 
@@ -41,6 +41,6 @@ class BaseService(Generic[T, M]):
         record = self.dao.get_by_id(pk)
 
         if not record:
-            abort(404, 'Not Found')
+            abort(400, 'There is not a record with id you are looking for')
 
         return record
