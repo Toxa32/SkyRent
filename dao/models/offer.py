@@ -16,3 +16,6 @@ class Offer(Base):
     city = db.Column(db.String, nullable=False)
     features_on = db.Column(db.PickleType, nullable=False)
     features_off = db.Column(db.PickleType, nullable=False)
+    host_name = db.Column(db.String, nullable=False)
+    host_phone = db.Column(db.String, nullable=False)
+    host_location = db.Column(db.String, nullable=False)

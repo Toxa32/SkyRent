@@ -18,5 +18,9 @@ offer_schema = api.model('offer', {
     'features_on': fields.List(required=True, cls_or_instance=String,
                                example=['Terrace', 'Fitness']),
     'features_off': fields.List(required=True, cls_or_instance=String,
-                                example=['AC', 'Netflix'])
+                                example=['AC', 'Netflix']),
+    'host_name': fields.String(required=True, example='Brendan'),
+    'host_phone': fields.String(required=True, example='367-326-6229'),
+    'host_location': fields.String(required=True,
+                                   example='10 Henrietta Street')
 })

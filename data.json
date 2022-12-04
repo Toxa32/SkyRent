@@ -8,7 +8,10 @@
     "country": "Greece",
     "city": "Athens",
     "features_on": "Terrace, Fitness, Desk, Parking, WiFi",
-    "features_off": "AC, Netflix, an iron, fireplace, bike"
+    "features_off": "AC, Netflix, an iron, fireplace, bike",
+    "host_name": "Alethea",
+    "host_phone": "568-904-2568",
+    "host_location": "1543 Agiou Konstantinou "
   },
   {
     "title": "Apartment on Lefkosias",
@@ -19,7 +22,10 @@
     "country": "Greece",
     "city": "Athens",
     "features_on": "Terrace, Fitness, Desk, Parking, WiFi",
-    "features_off": "AC, Netflix, an iron, fireplace, bike"
+    "features_off": "AC, Netflix, an iron, fireplace, bike",
+    "host_name": "Parthenia",
+    "host_phone": "367-326-6229",
+    "host_location": "20. 16 Lefkosias"
   },
   {
     "title": "Apartment on Finkenhubelweg ",
@@ -30,7 +36,10 @@
     "country": "Switzerland",
     "city": "Bern",
     "features_on": "Terrace, Fitness, Desk, Parking, WiFi",
-    "features_off": "AC, Netflix, an iron, fireplace, bike"
+    "features_off": "AC, Netflix, an iron, fireplace, bike",
+    "host_name": "Emilia",
+    "host_phone": "568-904-2568",
+    "host_location": "Finkenhubelweg 34, 106"
   },
   {
     "title": "Apartment on Gendarmenmarkt.",
@@ -41,7 +50,10 @@
     "country": "Germany",
     "city": "Berlin",
     "features_on": "Terrace, Fitness, Desk, Parking, WiFi",
-    "features_off": "AC, Netflix, an iron, fireplace, bike"
+    "features_off": "AC, Netflix, an iron, fireplace, bike",
+    "host_name": "Jürgen",
+    "host_phone": "367-326-6229",
+    "host_location": "Gendarmenmarkt 94"
   },
   {
     "title": "Appartment on Bulevardi",
@@ -52,7 +64,10 @@
     "country": "Finland",
     "city": "Helsinki",
     "features_on": "Terrace, Fitness, Desk, Parking, WiFi",
-    "features_off": "AC, Netflix, an iron, fireplace, bike"
+    "features_off": "AC, Netflix, an iron, fireplace, bike",
+    "host_name": "Taavetti",
+    "host_phone": "963-199-2046",
+    "host_location": "Bulevardi 16, 137A"
   },
   {
     "title": "Appartment on Kastanienallee",
@@ -63,7 +78,10 @@
     "country": "Brussels",
     "city": "Belgium",
     "features_on": "Terrace, Fitness, Desk, Parking, WiFi",
-    "features_off": "AC, Netflix, an iron, fireplace, bike"
+    "features_off": "AC, Netflix, an iron, fireplace, bike",
+    "host_name": "Genevia",
+    "host_phone": "568-904-2568",
+    "host_location": "503 Kastanienallee, 20F"
   },
   {
     "title": "Apartment on Louizis Riankour with balcony",
@@ -74,7 +92,10 @@
     "country": "Greece",
     "city": "Athens",
     "features_on": "Terrace, Fitness, Desk, Parking, WiFi",
-    "features_off": "AC, Netflix, an iron, fireplace, bike"
+    "features_off": "AC, Netflix, an iron, fireplace, bike",
+    "host_name": "Ptolema",
+    "host_phone": "367-326-6229",
+    "host_location": "Louizis Riankour, 100"
   },
   {
     "title": "Appartment on Akazienstrasse",
@@ -85,7 +106,10 @@
     "country": "Germany",
     "city": "Berlin",
     "features_on": "Terrace, Fitness, Desk, Parking, WiFi",
-    "features_off": "AC, Netflix, an iron, fireplace, bike"
+    "features_off": "AC, Netflix, an iron, fireplace, bike",
+    "host_name": "Klaus.",
+    "host_phone": "568-904-2568",
+    "host_location": "Akazienstrasse, 94"
   },
   {
     "title": "Appartment on Rue Antoine Dansaert",
@@ -96,7 +120,10 @@
     "country": "Belgium",
     "city": "Brussels",
     "features_on": "Terrace, Fitness, Desk, Parking, WiFi",
-    "features_off": "AC, Netflix, an iron, fireplace, bike"
+    "features_off": "AC, Netflix, an iron, fireplace, bike",
+    "host_name": "Dareau",
+    "host_phone": "367-326-6229",
+    "host_location": "Rue Antoine Dansaert, 201"
   },
   {
     "title": "Studio on Mannerheimintie",
@@ -107,7 +134,10 @@
     "country": "Finland",
     "city": "Helsinki",
     "features_on": "Terrace, Fitness, Desk, Parking, WiFi",
-    "features_off": "AC, Netflix, an iron, fireplace, bike"
+    "features_off": "AC, Netflix, an iron, fireplace, bike",
+    "host_name": "Ilona",
+    "host_phone": "568-904-2568",
+    "host_location": "200 Mannerheimintie"
   },
   {
     "title": "Loft on Calle de Preciados.",
@@ -118,7 +148,10 @@
     "country": "Spain",
     "city": "Madrid",
     "features_on": "Terrace, Fitness, Desk, Parking, WiFi",
-    "features_off": "AC, Netflix, an iron, fireplace, bike"
+    "features_off": "AC, Netflix, an iron, fireplace, bike",
+    "host_name": "Martín",
+    "host_phone": "367-326-6229",
+    "host_location": "Calle de Preciados 5c"
   },
   {
     "title": "Apartment on Grabenpromenade ",
@@ -129,7 +162,10 @@
     "country": "Switzerland",
     "city": "Bern",
     "features_on": "Terrace, Fitness, Desk, Parking, WiFi",
-    "features_off": "AC, Netflix, an iron, fireplace, bike"
+    "features_off": "AC, Netflix, an iron, fireplace, bike",
+    "host_name": "Lukas",
+    "host_phone": "568-904-2568",
+    "host_location": "Grabenpromenade, 12"
   },
   {
     "title": "Studio on Calle Huertas.",
@@ -140,7 +176,10 @@
     "country": "Spain",
     "city": "Madrid",
     "features_on": "Terrace, Fitness, Desk, Parking, WiFi",
-    "features_off": "AC, Netflix, an iron, fireplace, bike"
+    "features_off": "AC, Netflix, an iron, fireplace, bike",
+    "host_name": "Dolores",
+    "host_phone": "367-326-6229",
+    "host_location": "Calle Huertas 168"
   },
   {
     "title": "Appartment on A. Aleksanterinkatu",
@@ -151,7 +190,10 @@
     "country": "Finland",
     "city": "Helsinki",
     "features_on": "Terrace, Fitness, Desk, Parking, WiFi",
-    "features_off": "AC, Netflix, an iron, fireplace, bike"
+    "features_off": "AC, Netflix, an iron, fireplace, bike",
+    "host_name": "Santeri",
+    "host_phone": "568-904-2568",
+    "host_location": "A. Aleksanterinkatu 51"
   },
   {
     "title": "Loft on Calle Cava Baja.",
@@ -162,7 +204,10 @@
     "country": "Spain",
     "city": "Madrid",
     "features_on": "Terrace, Fitness, Desk, Parking, WiFi",
-    "features_off": "AC, Netflix, an iron, fireplace, bike"
+    "features_off": "AC, Netflix, an iron, fireplace, bike",
+    "host_name": "Pablo",
+    "host_phone": "367-326-6229",
+    "host_location": "Calle Cava Baja 7/33"
   },
   {
     "title": "Apartment on Bulevardul Unirii",
@@ -173,7 +218,10 @@
     "country": "Romania",
     "city": "Bucharest",
     "features_on": "Terrace, Fitness, Desk, Parking, WiFi",
-    "features_off": "AC, Netflix, an iron, fireplace, bike"
+    "features_off": "AC, Netflix, an iron, fireplace, bike",
+    "host_name": "Cristina",
+    "host_phone": "568-904-2568",
+    "host_location": "Bulevardul Unirii 29"
   },
   {
     "title": "Appartment on Torstraße",
@@ -184,7 +232,10 @@
     "country": "Germany",
     "city": "Berlin",
     "features_on": "Terrace, Fitness, Desk, Parking, WiFi",
-    "features_off": "AC, Netflix, an iron, fireplace, bike"
+    "features_off": "AC, Netflix, an iron, fireplace, bike",
+    "host_name": "Stefan",
+    "host_phone": "367-326-6229",
+    "host_location": "Torstraße 12/20"
   },
   {
     "title": "Suite on  Nørrebro.",
@@ -195,7 +246,10 @@
     "country": "Denmark",
     "city": "Copenhagen",
     "features_on": "Terrace, Fitness, Desk, Parking, WiFi",
-    "features_off": "AC, Netflix, an iron, fireplace, bike"
+    "features_off": "AC, Netflix, an iron, fireplace, bike",
+    "host_name": "Alma",
+    "host_phone": "568-904-2568",
+    "host_location": "Nørrebro 200"
   },
   {
     "title": "Appartment on Schloßstraße",
@@ -206,7 +260,10 @@
     "country": "Germany",
     "city": "Berlin",
     "features_on": "Terrace, Fitness, Desk, Parking, WiFi",
-    "features_off": "AC, Netflix, an iron, fireplace, bike"
+    "features_off": "AC, Netflix, an iron, fireplace, bike",
+    "host_name": "Hannah",
+    "host_phone": "367-326-6229",
+    "host_location": "Schloßstraße, 17b"
   },
   {
     "title": "Loft on Henrietta Street",
@@ -217,6 +274,9 @@
     "country": "Ireland",
     "city": "Dublin",
     "features_on": "Terrace, Fitness, Desk, Parking, WiFi",
-    "features_off": "AC, Netflix, an iron, fireplace, bike"
+    "features_off": "AC, Netflix, an iron, fireplace, bike",
+    "host_name": "Brendan",
+    "host_phone": "367-326-6229",
+    "host_location": "10 Henrietta Street"
   }
 ]

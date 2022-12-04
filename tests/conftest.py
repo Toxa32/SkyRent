@@ -81,6 +81,9 @@ def offer_keys():
         "country",
         "city",
         "features_on",
-        "features_off"
+        "features_off",
+        "host_name",
+        "host_phone",
+        "host_location"
     }
     return keys
