@@ -13,12 +13,6 @@ add_namespaces(api, [real_estate_ns])
 CORS(app)
 
 
-@app.after_request
-def add_header(response):
-    response.headers['Access-Control-Allow-Origin'] = '*'
-    return response
-
-
 if __name__ == '__main__':
 
     app.run()

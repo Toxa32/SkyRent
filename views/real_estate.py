@@ -1,5 +1,5 @@
 """This file contains CBVs to work with user's requests"""
-from flask import request
+from flask import request, jsonify
 from flask_restx import Namespace, Resource
 from container import offers_service
 from setup.api.schemas import offer_schema
@@ -22,6 +22,14 @@ class OffersView(Resource):
 
         return offers_service.get_all(**filters), 200
 
+    def options(self):
+
+        response = jsonify(message='OK')
+
+        response.headers.add('Access-Control-Allow-Origin', '*')
+
+        return response
+
 
 @real_estate_ns.route('/<int:offer_id>')
 class OfferView(Resource):
@@ -34,3 +42,11 @@ class OfferView(Resource):
         """
 
         return offers_service.get_one(offer_id), 200
+
+    def options(self):
+
+        response = jsonify(message='OK')
+
+        response.headers.add('Access-Control-Allow-Origin', '*')
+
+        return response
