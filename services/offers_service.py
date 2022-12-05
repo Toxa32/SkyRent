@@ -33,7 +33,12 @@ class OfferService(BaseService[OfferDAO, Offer]):
 
     @staticmethod
     def _is_filters_valid(filters: dict):
+        """This method checks if the filters are valid
 
+        :param filters: a dictionary with filters to check
+
+        :returns: True if the filters are valid or False otherwise
+        """
         # checking provided filters and data types
         for key, value in filters.items():
 

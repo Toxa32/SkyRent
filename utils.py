@@ -4,7 +4,6 @@ import json
 
 from flask import Flask
 from flask_restx import Api
-from flask_cors import CORS
 from flask_sqlalchemy import SQLAlchemy
 from setup.db import db
 from setup.api import api
@@ -30,7 +29,6 @@ def create_extensions(app: Flask) -> None:
 
     :param app: an instance of Flask
     """
-    CORS(app)
     db.init_app(app)
     api.init_app(app)
 
