@@ -21,24 +21,8 @@ class OfferService(BaseService[OfferDAO, Offer]):
         :returns: a list of models
         """
 
-        # checking provided filters and data types
-        for key, value in filters.items():
-
-            if key in ('start_price', 'end_price'):
-
-                if len(value) > 9:
-                    abort(400, 'Bad Request')
-
-                try:
-                    value = str(int(float(value)))
-
-                except ValueError:
-                    abort(400, 'Bad Request')
-
-            # this function used to reduce the number of validation conditions
-            exec(f"""if not value.{METHODS[key]}:
-                abort(400, "Bad Request")
-            """)
+        if not self._is_filters_valid(filters):
+            abort(400, 'Bad Request')
 
         offers = self.dao.get_all(**filters)
 
@@ -46,3 +30,30 @@ class OfferService(BaseService[OfferDAO, Offer]):
             abort(400, 'Unfortunately We have no records You are looking for')
 
         return offers
+
+    @staticmethod
+    def _is_filters_valid(filters: dict):
+
+        # checking provided filters and data types
+        for key, value in filters.items():
+
+            if key not in METHODS:
+                return False
+
+            if key in ('start_price', 'end_price'):
+
+                if len(value) > 9:
+                    return False
+
+                try:
+                    value = str(int(float(value)))
+
+                except ValueError:
+                    return False
+
+            # this function used to reduce the number of validation conditions
+            exec(f"""if not value.{METHODS[key]}:
+                        abort(400, 'Bad Request')              
+                    """)
+
+        return True
