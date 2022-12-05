@@ -25,6 +25,7 @@ class DevelopConfig(BaseConfig):
     DB_PATH = BaseConfig.BASE_DIR.joinpath('develop_db.db').as_posix()
     SQLALCHEMY_DATABASE_URI = f"sqlite:///{DB_PATH}"
     DEBUG = False
+    CORS_HEADERS = 'Content-Type'
 
 
 class ProductionConfig(BaseConfig):
@@ -33,6 +34,7 @@ class ProductionConfig(BaseConfig):
     DB_PATH = BaseConfig.BASE_DIR.joinpath('sky_rent.db').as_posix()
     SQLALCHEMY_DATABASE_URI = f"sqlite:///{DB_PATH}"
     DEBUG = False
+    CORS_HEADERS = 'Content-Type'
 
 
 class ConfigManager:
