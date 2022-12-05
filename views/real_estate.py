@@ -20,8 +20,7 @@ class OffersView(Resource):
         """
         filters = request.args
 
-        return offers_service.get_all(**filters), 200, {
-            'Access-Control-Allow-Origin': '*'}
+        return offers_service.get_all(**filters), 200
 
 
 @real_estate_ns.route('/<int:offer_id>')
@@ -34,5 +33,4 @@ class OfferView(Resource):
         :returns: a serialized model and a status code
         """
 
-        return offers_service.get_one(offer_id), 200, {
-            'Access-Control-Allow-Origin': '*'}
+        return offers_service.get_one(offer_id), 200
