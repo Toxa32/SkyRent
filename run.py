@@ -11,7 +11,7 @@ config = ConfigManager().get_config()
 app = create_app(config)
 add_namespaces(api, [real_estate_ns])
 cors = CORS(app, resources={
-    r"/offers/*": {"origins": "https://skypro-raids-01-front.onrender.com"}})
+    r"/offers/*": {"origins": "*"}})
 
 
 if __name__ == '__main__':
