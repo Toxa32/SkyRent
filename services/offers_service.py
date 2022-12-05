@@ -26,6 +26,9 @@ class OfferService(BaseService[OfferDAO, Offer]):
 
             if key in ('start_price', 'end_price'):
 
+                if len(value) > 9:
+                    abort(400, 'Bad Request')
+
                 try:
                     value = str(int(float(value)))
 
