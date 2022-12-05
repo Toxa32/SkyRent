@@ -1,6 +1,6 @@
 """This is a main file to start the application"""
 import dotenv
-from flask_cors import CORS
+from flask import request, make_response
 from configs import ConfigManager
 from views.real_estate import real_estate_ns
 from utils import create_app, add_namespaces, api
@@ -10,18 +10,25 @@ dotenv.load_dotenv()
 config = ConfigManager().get_config()
 app = create_app(config)
 add_namespaces(api, [real_estate_ns])
-CORS(app)
 
 
 @app.after_request
-def after_request(response):
-    response.headers["Access-Control-Allow-Origin"] = "*"
-    response.headers["Access-Control-Allow-Credentials"] = "true"
-    response.headers["Access-Control-Allow-Methods"] = \
-        "POST, GET, OPTIONS, PUT, DELETE"
-    response.headers["Access-Control-Allow-Headers"] = \
-        "Accept, Content-Type, Content-Length, " \
-        "Accept-Encoding, X-CSRF-Token, Authorization"
+def after_request_func(response):
+    origin = request.headers.get('Origin')
+    if request.method == 'OPTIONS':
+        response = make_response()
+        response.headers.add('Access-Control-Allow-Credentials', 'true')
+        response.headers.add('Access-Control-Allow-Headers', 'Content-Type')
+        response.headers.add('Access-Control-Allow-Headers', 'x-csrf-token')
+        response.headers.add('Access-Control-Allow-Methods',
+                             'GET, POST, OPTIONS, PUT, PATCH, DELETE')
+        if origin:
+            response.headers.add('Access-Control-Allow-Origin', origin)
+    else:
+        response.headers.add('Access-Control-Allow-Credentials', 'true')
+        if origin:
+            response.headers.add('Access-Control-Allow-Origin', origin)
+
     return response
 
 
