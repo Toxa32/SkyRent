@@ -22,14 +22,6 @@ class OffersView(Resource):
 
         return offers_service.get_all(**filters), 200
 
-    def options(self):
-
-        response = jsonify(message='OK')
-
-        response.headers.add('Access-Control-Allow-Origin', '*')
-
-        return response
-
 
 @real_estate_ns.route('/<int:offer_id>')
 class OfferView(Resource):
@@ -42,11 +34,3 @@ class OfferView(Resource):
         """
 
         return offers_service.get_one(offer_id), 200
-
-    def options(self):
-
-        response = jsonify(message='OK')
-
-        response.headers.add('Access-Control-Allow-Origin', '*')
-
-        return response

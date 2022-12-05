@@ -10,7 +10,8 @@ dotenv.load_dotenv()
 config = ConfigManager().get_config()
 app = create_app(config)
 add_namespaces(api, [real_estate_ns])
-CORS(app)
+cors = CORS(app, resources={
+    r"/offers/*": {"origins": "https://skypro-raids-01-front.onrender.com"}})
 
 
 if __name__ == '__main__':
