@@ -1,6 +1,5 @@
 """This unit contains the OfferDAO class to get data from offers table"""
 from typing import List
-
 from dao.base import BaseDAO
 from dao.models.offer import Offer
 # -----------------------------------------------------------------------
@@ -11,7 +10,7 @@ class OfferDAO(BaseDAO[Offer]):
     from offers table"""
     __model__ = Offer
 
-    def get_all(self, start_price: int = 0, end_price: int = 100000,
+    def get_all(self, start_price: int = 0, end_price: int = 999999999,
                 city: str = None, country: str = None) -> List[Offer]:
         """This method returns a list of models filtrated by parameters
 
@@ -32,6 +31,3 @@ class OfferDAO(BaseDAO[Offer]):
             query = query.filter(self.__model__.country.ilike(f'%{country}%'))
 
         return query.all()
-
-
-

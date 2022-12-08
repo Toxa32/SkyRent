@@ -1,6 +1,6 @@
 """This unit contains the OfferService class to work with offers table"""
+from typing import List
 from flask import abort
-
 from dao.offers_dao import OfferDAO, Offer
 from services.base import BaseService
 from constants import METHODS
@@ -12,7 +12,7 @@ class OfferService(BaseService[OfferDAO, Offer]):
     requests regarding offers"""
     pass
 
-    def get_all(self, **filters: dict):
+    def get_all(self, **filters: dict) -> List[Offer]:
         """This method returns a list of all offers filtrated filters
         if ones was provided
 
@@ -32,7 +32,7 @@ class OfferService(BaseService[OfferDAO, Offer]):
         return offers
 
     @staticmethod
-    def _is_filters_valid(filters: dict):
+    def _is_filters_valid(filters: dict) -> bool:
         """This method checks if the filters are valid
 
         :param filters: a dictionary with filters to check
@@ -62,3 +62,34 @@ class OfferService(BaseService[OfferDAO, Offer]):
                     """)
 
         return True
+
+    def get_country_and_city(self) -> List[dict]:
+        """This method returns a list of unique pairs of country and city
+
+        :returns: a list of dictionaries containing the country and city
+        """
+        offers = self.dao.get_all()
+
+        locations = self._create_locations_list(offers)
+
+        return locations
+
+    @staticmethod
+    def _create_locations_list(offers: List[Offer]) -> List[dict]:
+        """This method creates a list of dictionaries containing the
+        country and city from a list of offers
+
+        :param offers: a list of Offer instances
+
+        :returns: a list of dictionaries containing the country and city
+        """
+        locations = []
+
+        for offer in offers:
+
+            location = {offer.country: offer.city}
+
+            if location not in locations:
+                locations.append(location)
+
+        return locations
