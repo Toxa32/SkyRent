@@ -87,7 +87,7 @@ class OfferService(BaseService[OfferDAO, Offer]):
 
         for offer in offers:
 
-            location = {offer.country: offer.city}
+            location = {"country": offer.country, "city": offer.city}
 
             if location not in locations:
                 locations.append(location)
