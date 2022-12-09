@@ -92,4 +92,6 @@ class OfferService(BaseService[OfferDAO, Offer]):
             if location not in locations:
                 locations.append(location)
 
+        locations = list(sorted(locations, key=lambda x: tuple(x.items())))
+
         return locations
