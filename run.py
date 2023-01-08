@@ -1,4 +1,5 @@
 """This is a main file to start the application"""
+import os
 import dotenv
 from flask_cors import CORS
 from configs import DevelopConfig
