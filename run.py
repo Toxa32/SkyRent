@@ -7,6 +7,7 @@ from views.locations import location_ns
 from utils import create_app, add_namespaces, api
 # -------------------------------------------------------------------------
 dotenv.load_dotenv()
+os.environ['FLASK_MODE'] = 'development'
 # ------------------------------------------------------------------------
 config = DevelopConfig()
 app = create_app(config)
